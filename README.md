@@ -26,7 +26,7 @@ macOS setup with nix-darwin, Home Manager and nix-homebrew. The repo lives at `~
 
 2. **Clone this repo** to `~/.config/nix-config`:
    ```sh
-   nix run nixpkgs#git -- clone <repo-url> ~/.config/nix-config
+   nix run nixpkgs#git -- clone https://github.com/rdave8/nix-config.git ~/.config/nix-config
    ```
 
 3. **Install nix-darwin and apply the config:**
