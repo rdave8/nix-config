@@ -25,8 +25,12 @@ in
 
   system.defaults.dock = { };
 
-  system.defaults.CustomUserPreferences."com.pilotmoon.scroll-reverser" = {
-    InvertScrollingOn = true;
+  # Mouse tracking speed only; trackpad speed is separate (com.apple.trackpad.scaling)
+  system.defaults.".GlobalPreferences"."com.apple.mouse.scaling" = 1.5;
+
+  system.defaults.CustomUserPreferences = {
+    NSGlobalDomain."com.apple.mouse.linear" = true; # pointer acceleration off
+    "com.pilotmoon.scroll-reverser".InvertScrollingOn = true;
   };
 
   nix-homebrew = {
