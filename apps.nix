@@ -13,6 +13,7 @@
     "fl-studio"
     "discord"
     "scroll-reverser"
+    "desktoppr"
     "${username}/local/rex"
   ];
 

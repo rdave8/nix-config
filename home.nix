@@ -6,6 +6,16 @@
       -f -R "${config.home.homeDirectory}/Applications/Home Manager Apps"
   '';
 
+  # Desktop wallpaper (the login screen follows it). desktoppr comes from the
+  # Homebrew cask in apps.nix; skip quietly if it isn't installed yet.
+  home.activation.setWallpaper = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+    if [ -x /usr/local/bin/desktoppr ]; then
+      run /usr/local/bin/desktoppr ${./config/wallpaper.jpg}
+    else
+      echo "desktoppr not found; skipping wallpaper"
+    fi
+  '';
+
   programs.zsh.enable = true;
 
   programs.git = {
