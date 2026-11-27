@@ -35,5 +35,6 @@
     programs.obsidian.enable = true;
     programs.vscode.enable = true;
     programs.lazygit.enable = true;
+    programs.gh.enable = true;
   };
 }
