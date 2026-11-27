@@ -25,6 +25,10 @@ in
 
   system.defaults.dock = { };
 
+  system.defaults.CustomUserPreferences."com.pilotmoon.scroll-reverser" = {
+    InvertScrollingOn = true;
+  };
+
   nix-homebrew = {
     enable = true;
     user = username;
