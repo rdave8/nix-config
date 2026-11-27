@@ -38,8 +38,8 @@ in
   # Reducing animations. Writing universalaccess needs Full Disk Access
   # for the terminal running darwin-rebuild.
   system.defaults.universalaccess = {
-    reduceMotion = true;
-    reduceTransparency = true;
+    reduceMotion = false;
+    reduceTransparency = false; # keep translucent Dock/menu bar
   };
 
   system.defaults.NSGlobalDomain = {
