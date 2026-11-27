@@ -12,6 +12,7 @@
     "focusrite-control-2"
     "fl-studio"
     "discord"
+    "scroll-reverser"
     "${username}/local/rex"
   ];
 
@@ -20,7 +21,6 @@
       brave
       claude-code
       spotify
-      scroll-reverser
       iina
       python3
       nodejs
