@@ -42,7 +42,7 @@ sudo darwin-rebuild switch --flake ~/.config/nix-config#macbook
 ```
 Run `git add` on new files before switching. Flakes only see files git tracks.
 
-After changing a file in `config/`, reload Hammerspoon from its menu bar icon, or quit and reopen Karabiner.
+After changing a file in `config/`, reload Hammerspoon from its menu bar icon. Karabiner reads `config/karabiner/` directly and picks up changes on its own (changes made in its settings UI land there too, so commit them).
 
 **Add an app** in `apps.nix`. Use the first option that exists:
 1. A Home Manager module: `programs.<name>.enable = true;`

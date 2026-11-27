@@ -17,10 +17,10 @@
   };
 
   home.file.".hammerspoon/init.lua".source = ./config/hammerspoon/init.lua;
-  xdg.configFile."karabiner/karabiner.json" = {
-    source = ./config/karabiner/karabiner.json;
-    force = true;
-  };
+  # Karabiner must be able to write its config, so link the whole directory
+  # to the repo (writable) instead of a read-only file in the Nix store.
+  xdg.configFile."karabiner".source =
+    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.config/nix-config/config/karabiner";
 
   home.stateVersion = "26.05";
 }
