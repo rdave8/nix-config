@@ -16,6 +16,12 @@
     fi
   '';
 
+  # Hide the Spotlight menu bar icon (these are per-host prefs).
+  targets.darwin.currentHostDefaults = {
+    "com.apple.Spotlight".MenuItemHidden = true;
+    "com.apple.controlcenter".Spotlight = 8;
+  };
+
   programs.zsh.enable = true;
 
   programs.git = {
